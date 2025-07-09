@@ -1,279 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TraveElite</title>
-    <meta name="description" content="Explore breathtaking destinations, immerse yourself in diverse cultures, and create unforgettable memories with TravelElite.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-plane"></i>
-                <span>TravelElite</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="contact.html" class="nav-link">Contact Us</a>
-                
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TravBloom - Discover Your Next Adventure</title>
+		<meta
+			name="description"
+			content="Explore breathtaking destinations, immerse yourself in diverse cultures, and create unforgettable memories with TravBloom."
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<i class="fas fa-plane"></i>
+					<span>TravBloom</span>
+				</div>
+				<div class="nav-menu" id="nav-menu">
+					<a href="index.html" class="nav-link active">Home</a>
+					<a href="about.html" class="nav-link">About Us</a>
+					<a href="contact.html" class="nav-link">Contact Us</a>
+				</div>
+				<div class="nav-toggle" id="nav-toggle">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+		</nav>
 
-<!-- TravelElite Hero section -->
-<section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Discover Your Next
-                <span class="highlight">Adventure</span>
-            </h1>
-            <p class="hero-description">
-                Explore breathtaking destinations, immerse yourself in diverse cultures, and create unforgettable memories that will last a lifetime.
-            </p>
-            
-            <!-- Search Bar -->
-            <div class="search-container">
-                <div class="search-box">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" id="search-input" placeholder="Search destinations, cities, or experiences..." class="search-input">
-                </div>
-                <div class="search-results" id="search-results"></div>
-            </div>
+		<section class="hero">
+			<div class="hero-overlay"></div>
+			<div class="hero-content">
+				<h1 class="hero-title">
+					Discover Your Next
+					<span class="highlight">Adventure</span>
+				</h1>
+				<p class="hero-description">
+					Explore breathtaking destinations, immerse yourself in diverse cultures,
+					and create unforgettable memories that will last a lifetime.
+				</p>
 
-            <button class="btn btn-large btn-primary" id="book-now-btn">Book Now</button>
+				<div class="search-container">
+					<div class="search-box">
+						<i class="fas fa-search search-icon"></i>
+						<input
+							type="text"
+							id="search-input"
+							placeholder="Search destinations, cities, or experiences..."
+							class="search-input"
+						/>
+					</div>
+					<div class="search-results" id="search-results"></div>
+				</div>
 
-            <!-- Social Media Links -->
-            <div class="social-links">
-                <span class="social-text">Follow us:</span>
-                <a href="#" class="social-link" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+				<button class="btn btn-large btn-primary" id="book-now-btn">
+					Book Now
+				</button>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose TravelElite?</h2>
-                <p>We make your travel dreams come true with personalized experiences and expert guidance.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Expert Destinations</h3>
-                    <p>Discover hidden gems and popular destinations curated by travel experts who know the best spots.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Cultural Immersion</h3>
-                    <p>Experience authentic local cultures, traditions, and cuisines that will broaden your perspective.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Flexible Planning</h3>
-                    <p>Plan your perfect trip with flexible booking options and personalized itineraries.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Safe & Secure</h3>
-                    <p>Travel with confidence knowing we prioritize your safety and security at every step.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>Our dedicated support team is available around the clock to assist you during your journey.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h3>Best Prices</h3>
-                    <p>Get the best value for your money with our competitive prices and exclusive deals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+				<!-- Social Media Links -->
+				<div class="social-links">
+					<span class="social-text">Follow us:</span>
+					<a href="#" class="social-link" aria-label="Facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a href="#" class="social-link" aria-label="Twitter">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="#" class="social-link" aria-label="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="#" class="social-link" aria-label="YouTube">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</div>
+			</div>
+		</section>
 
-    <!-- Destinations section -->
-    <section class="destinations">
-        <div class="container">
-            <div class="section-header">
-                <h2>Popular Destinations</h2>
-                <p>Explore our most loved travel destinations around the world.</p>
-            </div>
-            <div class="destinations-grid" id="destinations-grid">
-              
-            </div>
-            <div class="text-center" style="margin-top: 3rem;">
-                <button class="btn btn-primary" id="view-all-destinations">View All Destinations</button>
-            </div>
-        </div>
-    </section>
+		<section class="features">
+			<div class="container">
+				<div class="section-header">
+					<h2>Why Choose TravBloom?</h2>
+					<p>
+						We make your travel dreams come true with personalized experiences and
+						expert guidance.
+					</p>
+				</div>
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-map-marker-alt"></i>
+						</div>
+						<h3>Expert Destinations</h3>
+						<p>
+							Discover hidden gems and popular destinations curated by travel experts
+							who know the best spots.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-users"></i>
+						</div>
+						<h3>Cultural Immersion</h3>
+						<p>
+							Experience authentic local cultures, traditions, and cuisines that will
+							broaden your perspective.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-calendar-alt"></i>
+						</div>
+						<h3>Flexible Planning</h3>
+						<p>
+							Plan your perfect trip with flexible booking options and personalized
+							itineraries.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<h3>Safe & Secure</h3>
+						<p>
+							Travel with confidence knowing we prioritize your safety and security at
+							every step.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-headset"></i>
+						</div>
+						<h3>24/7 Support</h3>
+						<p>
+							Our dedicated support team is available around the clock to assist you
+							during your journey.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="fas fa-dollar-sign"></i>
+						</div>
+						<h3>Best Prices</h3>
+						<p>
+							Get the best value for your money with our competitive prices and
+							exclusive deals.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<!-- Travel Categories -->
-    <section class="categories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Travel Categories</h2>
-                <p>Find the perfect type of adventure that matches your travel style.</p>
-            </div>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1692969008800-92f833051b4d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"       alt="Beach Holidays" loading="lazy">
-                    </div>
-                    <div class="category-content">
-                        <h3>Beach Holidays</h3>
-                        <p>Relax on pristine beaches with crystal clear waters and tropical paradise vibes.</p>
-                        <a href="#" class="category-link">Explore Beaches <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1587412328528-faa99d71e66c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountain Adventures" loading="lazy">
-                    </div>
-                    <div class="category-content">
-                        <h3>Mountain Adventures</h3>
-                        <p>Conquer peaks, enjoy breathtaking views, and experience thrilling mountain activities.</p>
-                        <a href="#" class="category-link">Explore Mountains <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="City Breaks" loading="lazy">
-                    </div>
-                    <div class="category-content">
-                        <h3>City Breaks</h3>
-                        <p>Discover vibrant cities, rich history, amazing architecture, and urban culture.</p>
-                        <a href="#" class="category-link">Explore Cities <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cultural Tours" loading="lazy">
-                    </div>
-                    <div class="category-content">
-                        <h3>Cultural Tours</h3>
-                        <p>Immerse yourself in local traditions, history, and authentic cultural experiences.</p>
-                        <a href="#" class="category-link">Explore Culture <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="beach-recommendations">
+			<div class="container">
+				<div class="section-header">
+					<h2>Best Beach Destinations</h2>
+					<p>
+						Discover South Africa's most stunning coastal paradises with pristine
+						beaches and crystal-clear waters.
+					</p>
+				</div>
+				<div class="recommendation-grid">
+					<div class="recommendation-card">
+						<div class="recommendation-images">
+							<img
+								src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								alt="Clifton Beach Cape Town"
+								class="main-image"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								alt="Clifton Beach Sunset"
+								class="secondary-image"
+							/>
+						</div>
+						<div class="recommendation-content">
+							<h3>Clifton Beach, Cape Town</h3>
+							<div class="recommendation-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<span>4.9/5</span>
+							</div>
+							<p>
+								One of the world's most beautiful beaches with white sand, turquoise
+								waters, and the iconic Twelve Apostles mountain backdrop. Perfect for
+								sunbathing and sunset viewing.
+							</p>
+							<div class="recommendation-features">
+								<span class="feature-tag"
+									><i class="fas fa-umbrella-beach"></i> White Sand</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-mountain"></i> Mountain Views</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-camera"></i> Instagram Worthy</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="recommendation-card">
+						<div class="recommendation-images">
+							<img
+								src="https://images.unsplash.com/photo-1682065936841-6bb7f68207b7?q=80&w=964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+								alt="Durban Golden Mile"
+								class="main-image"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								alt="Durban Beach Activities"
+								class="secondary-image"
+							/>
+						</div>
+						<div class="recommendation-content">
+							<h3>Golden Mile, Durban</h3>
+							<div class="recommendation-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<span>4.7/5</span>
+							</div>
+							<p>
+								A 6km stretch of golden beaches along the Indian Ocean with warm waters
+								year-round. Features beachfront promenade, water sports, and vibrant
+								beach culture.
+							</p>
+							<div class="recommendation-features">
+								<span class="feature-tag"
+									><i class="fas fa-swimmer"></i> Warm Waters</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-surfing"></i> Water Sports</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-utensils"></i> Beachfront Dining</span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <div class="newsletter-text">
-                    <h2>Stay Updated with Travel Deals</h2>
-                    <p>Subscribe to our newsletter and get exclusive travel deals, destination guides, and travel tips delivered to your inbox.</p>
-                </div>
-                <div class="newsletter-form">
-                    <form id="newsletter-form">
-                        <div class="newsletter-input-group">
-                            <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="temple-recommendations">
+			<div class="container">
+				<div class="section-header">
+					<h2>Sacred & Spiritual Sites</h2>
+					<p>
+						Explore South Africa's diverse spiritual heritage through beautiful
+						temples and sacred places.
+					</p>
+				</div>
+				<div class="recommendation-grid">
+					<div class="recommendation-card">
+						<div class="recommendation-images">
+							<img
+								src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								alt="Durban Hindu Temple"
+								class="main-image"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								alt="Temple Interior"
+								class="secondary-image"
+							/>
+						</div>
+						<div class="recommendation-content">
+							<h3>Sri Siva Subramaniar Temple, Durban</h3>
+							<div class="recommendation-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<span>4.8/5</span>
+							</div>
+							<p>
+								The largest Hindu temple in the Southern Hemisphere, featuring stunning
+								Dravidian architecture with intricate carvings and colorful gopurams. A
+								spiritual and cultural landmark.
+							</p>
+							<div class="recommendation-features">
+								<span class="feature-tag"
+									><i class="fas fa-pray"></i> Hindu Heritage</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-building"></i> Architecture</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-heart"></i> Cultural Tours</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="recommendation-card">
+						<div class="recommendation-images">
+							<img
+								src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								alt="Lotus Temple Johannesburg"
+								class="main-image"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								alt="Temple Gardens"
+								class="secondary-image"
+							/>
+						</div>
+						<div class="recommendation-content">
+							<h3>Radha Krishna Temple, Johannesburg</h3>
+							<div class="recommendation-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<span>4.6/5</span>
+							</div>
+							<p>
+								A beautiful ISKCON temple with serene gardens and peaceful atmosphere.
+								Known for its spiritual programs, vegetarian cuisine, and welcoming
+								community environment.
+							</p>
+							<div class="recommendation-features">
+								<span class="feature-tag"
+									><i class="fas fa-leaf"></i> Peaceful Gardens</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-utensils"></i> Vegetarian Food</span
+								>
+								<span class="feature-tag"><i class="fas fa-users"></i> Community</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-plane"></i>
-                        <span>TravelElite</span>
-                    </div>
-                    <p>Your gateway to extraordinary adventures and cultural discoveries around the world.</p>
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Destinations</a></li>
-                        <li><a href="#">Travel Packages</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Travel Categories</h4>
-                    <ul>
-                        <li><a href="#">Beach Holidays</a></li>
-                        <li><a href="#">Mountain Adventures</a></li>
-                        <li><a href="#">City Breaks</a></li>
-                        <li><a href="#">Cultural Tours</a></li>
-                        <li><a href="#">Luxury Travel</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i>+277-123-4567</li>
-                        <li><i class="fas fa-envelope"></i> hello@travelElite.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Adventure City</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 TravelElite. All rights reserved.</p>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+		<section class="country-recommendations">
+			<div class="container">
+				<div class="section-header">
+					<h2>Explore Southern Africa</h2>
+					<p>
+						Discover the diverse beauty and rich cultures of Southern African
+						countries beyond South Africa.
+					</p>
+				</div>
+				<div class="recommendation-grid">
+					<div class="recommendation-card">
+						<div class="recommendation-images">
+							<img
+								src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								alt="Victoria Falls Zimbabwe"
+								class="main-image"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								alt="Zimbabwe Wildlife"
+								class="secondary-image"
+							/>
+						</div>
+						<div class="recommendation-content">
+							<h3>Zimbabwe - Victoria Falls</h3>
+							<div class="recommendation-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<span>4.9/5</span>
+							</div>
+							<p>
+								Experience the thundering majesty of Victoria Falls, one of the Seven
+								Natural Wonders of the World. Adventure activities, wildlife safaris,
+								and breathtaking landscapes await.
+							</p>
+							<div class="recommendation-features">
+								<span class="feature-tag"
+									><i class="fas fa-water"></i> Victoria Falls</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-paw"></i> Wildlife Safari</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-parachute-box"></i> Adventure Sports</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="recommendation-card">
+						<div class="recommendation-images">
+							<img
+								src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+								alt="Namibia Desert"
+								class="main-image"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1590736969955-71cc94901144?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+								alt="Namibia Wildlife"
+								class="secondary-image"
+							/>
+						</div>
+						<div class="recommendation-content">
+							<h3>Namibia - Sossusvlei Desert</h3>
+							<div class="recommendation-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<span>4.8/5</span>
+							</div>
+							<p>
+								Witness the world's highest sand dunes in the Namib Desert, ancient
+								landscapes, and unique desert-adapted wildlife. A photographer's
+								paradise with stunning sunrises and starry nights.
+							</p>
+							<div class="recommendation-features">
+								<span class="feature-tag"
+									><i class="fas fa-mountain"></i> Sand Dunes</span
+								>
+								<span class="feature-tag"
+									><i class="fas fa-camera"></i> Photography</span
+								>
+								<span class="feature-tag"><i class="fas fa-star"></i> Stargazing</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-  <script src="script.js"></script>
-</body>
+		<section class="destinations">
+			<div class="container">
+				<div class="section-header">
+					<h2>Popular Destinations</h2>
+					<p>Explore our most loved travel destinations around South Africa.</p>
+				</div>
+				<div class="destinations-grid" id="destinations-grid"></div>
+				<div class="text-center" style="margin-top: 3rem">
+					<button class="btn btn-primary" id="view-all-destinations">
+						View All Destinations
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="categories">
+			<div class="container">
+				<div class="section-header">
+					<h2>Travel Categories</h2>
+					<p>Find the perfect type of adventure that matches your travel style.</p>
+				</div>
+				<div class="categories-grid">
+					<div class="category-card">
+						<div class="category-image">
+							<img
+								src="https://images.unsplash.com/photo-1692969008800-92f833051b4d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+								alt="Beach Holidays"
+								loading="lazy"
+							/>
+						</div>
+						<div class="category-content">
+							<h3>Beach Holidays</h3>
+							<p>
+								Relax on pristine beaches with crystal clear waters and tropical
+								paradise vibes.
+							</p>
+							<a href="#" class="category-link"
+								>Explore Beaches <i class="fas fa-arrow-right"></i
+							></a>
+						</div>
+					</div>
+					<div class="category-card">
+						<div class="category-image">
+							<img
+								src="https://images.unsplash.com/photo-1587412328528-faa99d71e66c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+								alt="Mountain Adventures"
+								loading="lazy"
+							/>
+						</div>
+						<div class="category-content">
+							<h3>Mountain Adventures</h3>
+							<p>
+								Conquer peaks, enjoy breathtaking views, and experience thrilling
+								mountain activities.
+							</p>
+							<a href="#" class="category-link"
+								>Explore Mountains <i class="fas fa-arrow-right"></i
+							></a>
+						</div>
+					</div>
+					<div class="category-card">
+						<div class="category-image">
+							<img
+								src="https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+								alt="City Breaks"
+								loading="lazy"
+							/>
+						</div>
+						<div class="category-content">
+							<h3>City Breaks</h3>
+							<p>
+								Discover vibrant cities, rich history, amazing architecture, and urban
+								culture.
+							</p>
+							<a href="#" class="category-link"
+								>Explore Cities <i class="fas fa-arrow-right"></i
+							></a>
+						</div>
+					</div>
+					<div class="category-card">
+						<div class="category-image">
+							<img
+								src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+								alt="Cultural Tours"
+								loading="lazy"
+							/>
+						</div>
+						<div class="category-content">
+							<h3>Cultural Tours</h3>
+							<p>
+								Immerse yourself in local traditions, history, and authentic cultural
+								experiences.
+							</p>
+							<a href="#" class="category-link"
+								>Explore Culture <i class="fas fa-arrow-right"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="newsletter">
+			<div class="container">
+				<div class="newsletter-content">
+					<div class="newsletter-text">
+						<h2>Stay Updated with Travel Deals</h2>
+						<p>
+							Subscribe to our newsletter and get exclusive travel deals, destination
+							guides, and travel tips delivered to your inbox.
+						</p>
+					</div>
+					<div class="newsletter-form">
+						<form id="newsletter-form">
+							<div class="newsletter-input-group">
+								<input
+									type="email"
+									id="newsletter-email"
+									placeholder="Enter your email address"
+									required
+								/>
+								<button type="submit" class="btn btn-primary">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<div class="footer-logo">
+							<i class="fas fa-plane"></i>
+							<span>TravBloom</span>
+						</div>
+						<p>
+							Your gateway to extraordinary adventures and cultural discoveries around
+							the world.
+						</p>
+						<div class="footer-social">
+							<a href="#" class="footer-social-link"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="footer-social-link"
+								><i class="fab fa-instagram"></i
+							></a>
+							<a href="#" class="footer-social-link"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+					<div class="footer-section">
+						<h4>Quick Links</h4>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="#">Destinations</a></li>
+							<li><a href="#">Travel Packages</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<h4>Travel Categories</h4>
+						<ul>
+							<li><a href="#">Beach Holidays</a></li>
+							<li><a href="#">Mountain Adventures</a></li>
+							<li><a href="#">City Breaks</a></li>
+							<li><a href="#">Cultural Tours</a></li>
+							<li><a href="#">Luxury Travel</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<h4>Contact Info</h4>
+						<ul>
+							<li><i class="fas fa-phone"></i> +277-123-4567</li>
+							<li><i class="fas fa-envelope"></i> hello@travbloom.com</li>
+							<li>
+								<i class="fas fa-map-marker-alt"></i> 123 Travel Street, Adventure City
+							</li>
+							<li><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="footer-bottom-content">
+						<p>&copy; 2025 TravBloom. All rights reserved.</p>
+						<div class="footer-links">
+							<a href="#">Privacy Policy</a>
+							<a href="#">Terms of Service</a>
+							<a href="#">Cookie Policy</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
 </html>

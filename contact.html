@@ -1,251 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TravelElite</title>
-    <meta name="description" content="Get in touch with TravelElite's travel experts to plan your next adventure or ask any questions about our services.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-plane"></i>
-                <span>TravelElite</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="contact.html" class="nav-link active">Contact Us</a>
-                
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us - TravBloom</title>
+		<meta
+			name="description"
+			content="Get in touch with TravBloom for your next adventure. Contact our travel experts for personalized travel planning and exceptional service."
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<i class="fas fa-plane"></i>
+					<span>TravBloom</span>
+				</div>
+				<div class="nav-menu" id="nav-menu">
+					<a href="index.html" class="nav-link">Home</a>
+					<a href="about.html" class="nav-link">About Us</a>
+					<a href="contact.html" class="nav-link active">Contact Us</a>
+				</div>
+				<div class="nav-toggle" id="nav-toggle">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+		</nav>
 
-    <!-- Page Header -->
-    <section class="page-header contact-header">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>Ready to start your next adventure? Get in touch with our travel experts and let us help you create the perfect journey.</p>
-        </div>
-    </section>
+		<section class="page-header contact-header">
+			<div class="container">
+				<h1>Contact TravBloom</h1>
+				<p>
+					Ready to start your next adventure? Get in touch with our travel experts
+					who are passionate about creating extraordinary experiences just for you.
+				</p>
+			</div>
+		</section>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <!-- Contact Form -->
-                <div class="contact-form-section">
-                    <h2>Send us a Message</h2>
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-                    </form>
-                </div>
+		<section class="contact">
+			<div class="container">
+				<div class="contact-content">
+					<div class="contact-form-section">
+						<h2>Send Us a Message</h2>
+						<form class="contact-form" id="contact-form">
+							<div class="form-row">
+								<div class="form-group">
+									<label for="first-name">First Name</label>
+									<input type="text" id="first-name" name="firstName" required />
+								</div>
+								<div class="form-group">
+									<label for="last-name">Last Name</label>
+									<input type="text" id="last-name" name="lastName" required />
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="email">Email Address</label>
+									<input type="email" id="email" name="email" required />
+								</div>
+								<div class="form-group">
+									<label for="phone">Phone Number</label>
+									<input type="tel" id="phone" name="phone" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="destination">Interested Destination</label>
+								<input
+									type="text"
+									id="destination"
+									name="destination"
+									placeholder="e.g., Cape Town, Durban, Victoria Falls"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="travel-dates">Preferred Travel Dates</label>
+								<input
+									type="text"
+									id="travel-dates"
+									name="travelDates"
+									placeholder="e.g., March 2025 or Flexible"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="message">Tell Us About Your Dream Trip</label>
+								<textarea
+									id="message"
+									name="message"
+									rows="5"
+									placeholder="Share your travel interests, group size, budget range, or any special requirements..."
+									required
+								></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary">Send Message</button>
+						</form>
+					</div>
 
-                <!-- Contact Information -->
-                <div class="contact-info-section">
-                    <h2>Get in Touch</h2>
-                    <p>We're here to help you plan your perfect journey. Reach out to us through any of these channels.</p>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Office Address</h3>
-                                <p>123 Travel Street<br>Adventure City, AC 12345<br>South Africa</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Phone Number</h3>
-                                <p>+277-123-4567</p>
-                                <small>Available 24/7 for emergencies</small>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Email Address</h3>
-                                <p>hello@travelElite.com</p>
-                                <small>We'll respond within 24 hours</small>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Business Hours</h3>
-                                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
-                            </div>
-                        </div>
-                    </div>
+					<div class="contact-info-section">
+						<h2>Get In Touch</h2>
+						<div class="contact-info">
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-phone"></i>
+								</div>
+								<div class="contact-details">
+									<h3>Phone</h3>
+									<p>+277-123-4567</p>
+									<small>Mon-Fri: 9AM-5PM (SAST)</small>
+								</div>
+							</div>
 
-                    <!-- Map Placeholder -->
-                    <div class="map-container">
-                        <div class="map-placeholder">
-                            <i class="fas fa-map"></i>
-                            <p>Interactive Map</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<div class="contact-details">
+									<h3>Email</h3>
+									<p>hello@travbloom.com</p>
+									<small>We respond within 24 hours</small>
+								</div>
+							</div>
 
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Find answers to common questions about our services and travel arrangements.</p>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How do I book a trip with TravelElite?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Booking a trip with TravelElite is easy! You can browse our destinations on our website, use our search feature to find specific locations, or contact our travel experts directly for personalized recommendations. Once you've selected your destination, you can book online or speak with our team to customize your experience.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What payment methods do you accept?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We accept all major credit cards (Visa, MasterCard, American Express), PayPal, bank transfers, and in some cases, cryptocurrency. For certain destinations, we also offer payment plans to help you budget for your dream vacation.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What is your cancellation policy?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our standard cancellation policy allows for full refunds up to 30 days before your trip, 50% refund for cancellations 15-29 days before departure, and no refunds for cancellations less than 15 days before departure. However, we understand that emergencies happen, so we offer travel insurance options and evaluate special circumstances on a case-by-case basis.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you offer group discounts?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! We offer special rates for groups of 5 or more travelers. The larger the group, the better the discount. We also provide dedicated group coordinators to ensure your group travel experience is seamless and enjoyable.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Can you accommodate special dietary requirements?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We understand the importance of dietary needs and preferences. When booking your trip, simply let us know about any dietary requirements (vegetarian, vegan, gluten-free, allergies, etc.), and we'll ensure that appropriate meal options are available throughout your journey.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-map-marker-alt"></i>
+								</div>
+								<div class="contact-details">
+									<h3>Office</h3>
+									<p>123 Travel Street</p>
+									<p>Adventure City, South Africa</p>
+									<small>Visit by appointment</small>
+								</div>
+							</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-plane"></i>
-                        <span>TravBloom</span>
-                    </div>
-                    <p>Your gateway to extraordinary adventures and cultural discoveries around the world.</p>
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Destinations</a></li>
-                        <li><a href="#">Travel Packages</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Travel Categories</h4>
-                    <ul>
-                        <li><a href="#">Beach Holidays</a></li>
-                        <li><a href="#">Mountain Adventures</a></li>
-                        <li><a href="#">City Breaks</a></li>
-                        <li><a href="#">Cultural Tours</a></li>
-                        <li><a href="#">Luxury Travel</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +277-123-4567</li>
-                        <li><i class="fas fa-envelope"></i> hello@travelElite.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Adventure City</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 TravelElite. All rights reserved.</p>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-clock"></i>
+								</div>
+								<div class="contact-details">
+									<h3>Business Hours</h3>
+									<p>Monday - Friday: 9AM - 5PM</p>
+									<p>Saturday: 10AM - 2PM</p>
+									<small>Closed Sundays & Public Holidays</small>
+								</div>
+							</div>
+						</div>
 
-    <script src="script.js"></script>
-</body>
+						<div class="map-container">
+							<div class="map-placeholder">
+								<i class="fas fa-map-marked-alt"></i>
+								<p>Interactive Map Coming Soon</p>
+								<small>Visit our office in the heart of Adventure City</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="faq">
+			<div class="container">
+				<div class="section-header">
+					<h2>Frequently Asked Questions</h2>
+					<p>
+						Find answers to common questions about planning your trip with TravBloom.
+					</p>
+				</div>
+				<div class="faq-container">
+					<div class="faq-item">
+						<div class="faq-question">
+							<h3>How far in advance should I book my trip?</h3>
+							<div class="faq-toggle">
+								<i class="fas fa-plus"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							<p>
+								We recommend booking at least 2-3 months in advance for the best
+								availability and rates. However, we can often accommodate last-minute
+								bookings depending on the destination and season. Peak seasons
+								(December-January and Easter holidays) require earlier booking.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							<h3>Do you offer customized travel packages?</h3>
+							<div class="faq-toggle">
+								<i class="fas fa-plus"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							<p>
+								We specialize in creating personalized travel experiences tailored to
+								your interests, budget, and preferences. Our travel experts will work
+								with you to design the perfect itinerary that matches your dream
+								vacation.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							<h3>What is included in your travel packages?</h3>
+							<div class="faq-toggle">
+								<i class="fas fa-plus"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							<p>
+								Our packages typically include accommodation, transportation, guided
+								tours, and selected meals. Specific inclusions vary by package. We
+								provide detailed itineraries so you know exactly what's covered and
+								what's optional.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							<h3>Do you provide travel insurance?</h3>
+							<div class="faq-toggle">
+								<i class="fas fa-plus"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							<p>
+								We strongly recommend travel insurance and can help you find the right
+								coverage for your trip. We work with reputable insurance providers to
+								offer comprehensive protection for your investment and peace of mind.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							<h3>What safety measures do you have in place?</h3>
+							<div class="faq-toggle">
+								<i class="fas fa-plus"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							<p>
+								Safety is our top priority. We work only with licensed and experienced
+								local guides, use reputable accommodation and transportation providers,
+								and provide 24/7 emergency support during your trip. We also stay
+								updated on current safety conditions in all our destinations.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							<h3>Can you accommodate special dietary requirements?</h3>
+							<div class="faq-toggle">
+								<i class="fas fa-plus"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							<p>
+								Yes, we can accommodate various dietary requirements including
+								vegetarian, vegan, halal, kosher, and allergy-specific needs. Please
+								inform us of any dietary restrictions when booking so we can make
+								appropriate arrangements with restaurants and hotels.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<div class="footer-logo">
+							<i class="fas fa-plane"></i>
+							<span>TravBloom</span>
+						</div>
+						<p>
+							Your gateway to extraordinary adventures and cultural discoveries around
+							the world.
+						</p>
+						<div class="footer-social">
+							<a href="#" class="footer-social-link"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="footer-social-link"
+								><i class="fab fa-instagram"></i
+							></a>
+							<a href="#" class="footer-social-link"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+					<div class="footer-section">
+						<h4>Quick Links</h4>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="#">Destinations</a></li>
+							<li><a href="#">Travel Packages</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<h4>Travel Categories</h4>
+						<ul>
+							<li><a href="#">Beach Holidays</a></li>
+							<li><a href="#">Mountain Adventures</a></li>
+							<li><a href="#">City Breaks</a></li>
+							<li><a href="#">Cultural Tours</a></li>
+							<li><a href="#">Luxury Travel</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<h4>Contact Info</h4>
+						<ul>
+							<li><i class="fas fa-phone"></i> +277-123-4567</li>
+							<li><i class="fas fa-envelope"></i> hello@travbloom.com</li>
+							<li>
+								<i class="fas fa-map-marker-alt"></i> 123 Travel Street, Adventure City
+							</li>
+							<li><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="footer-bottom-content">
+						<p>&copy; 2025 TravBloom. All rights reserved.</p>
+						<div class="footer-links">
+							<a href="#">Privacy Policy</a>
+							<a href="#">Terms of Service</a>
+							<a href="#">Cookie Policy</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
 </html>
