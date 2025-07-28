@@ -385,7 +385,7 @@ if (contactForm) {
 }
 
 if (newsletterForm) {
-	newsletterForm.addEventListener('submit', async (e) => {
+	newsletterForm.addEventListener('submit', (e) => {
 		e.preventDefault();
 
 		const submitBtn = newsletterForm.querySelector('button[type="submit"]');
@@ -404,12 +404,14 @@ if (newsletterForm) {
 			newsletterForm.insertBefore(successMessage, newsletterForm.firstChild);
 
 			emailInput.value = '';
+			emailInput.disabled = true;
 
 			submitBtn.textContent = originalText;
 			submitBtn.disabled = false;
 
 			setTimeout(() => {
 				successMessage.remove();
+				emailInput.disabled = false;
 			}, 5000);
 		}, 1500);
 	});
