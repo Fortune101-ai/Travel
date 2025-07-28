@@ -283,7 +283,7 @@ function initializeCounters() {
 	const counters = document.querySelectorAll('.stat-number');
 
 	const animateCounter = (counter) => {
-		const target = parseInt(counter.getAttribute('data-target'));
+		const target = parseInt(counter.getAttribute('data-target'), 10);
 		const increment = target / 100;
 		let current = 0;
 
